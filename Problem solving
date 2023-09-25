@@ -7,10 +7,35 @@ e) Generate Analyze solution
 f) Implementation
 
                                 ****Problem Definition****
-This project intends to develop a standard secondary school management system that manage both student academic activities and staffs activities.
+
+This project intends to develop a standard secondary school management system that manage both student academic and staffs activities.
 It also manage school finance routines which includes tuition fees, staff salary, transportation, clinicals, sports and academic materials.
-This project also covers students enrollment which should be of two different varieties namely fresh and transfer, it also convers employment of staff and sub-staffs alternatively academic
-and non-academic staff. These staffs has different roles as name implies, there are academic staffs whos role solely depends on school academic division, they partially or entirely resides in
-tutoring activies, managing and maintenance of both students and staff records. Conclusively these staffs sub-disivions are named administrative staffs and Academic staffs.
-Sub-staffs do not engage in academic activities of the school but play vital role in school management some of their roles includes security suveillance, sport, tranportation, taking care of school garden,
-cleaning school premises and more. non-academic staff be a messenger, janitor, garder, driver or matron.
+This project also covers students enrollment which should be of two different varieties namely Fresh and Transfer, it also convers employment of staff and sub-staffs alternatively academic and non-academic staff. These staffs has different roles as their name imply, there are academic staffs whos role solely depends on school academic division, they partially or entirely resides in tutoring activies, managing and maintenance of both students and staff records. Conclusively these staff sub-disivions are named administrative staffs and Academic staffs.
+Sub-staffs do not engage in academic activities of the school but play vital role in school management some of their roles includes security suveillance, sport, tranportation, taking care of school garden, cleaning school premises and more. non-academic staff can be a messenger, janitor, gardener, driver or matron.
+Next chapter comes with detailed information of all modules mentioned above.
+
+
+
+                            ****Problem Analysis****
+After thouroughful research of the above problem, we came up with systematic approach on how to deal with it, going through problem definition we realized it must be splitted in severel modules and chunks to clearly analyse to establish our goal.
+Module divisions are as followed:
+1) STAFF
+    ---ADMINISTRATIVE
+        -Employment
+        -Roles
+        -Salary
+        -Status
+        -Enrollment (Registration)
+        -Student Fees
+    ---ACADEMIA
+        -Department
+        -Class
+        -Tutor
+        -Examination
+    ---NON-ACADEMIC
+        -Sport
+        -Garden
+        -Transport
+        -Inspection(cleaning)
+2)STUDENT
+    ---
