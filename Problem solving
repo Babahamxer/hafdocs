@@ -38,4 +38,7 @@ Module divisions are as followed:
         -Transport
         -Inspection(cleaning)
 2)STUDENT
-    ---
+    ---DASHBOARD
+       -Login & Logout
+       -Complain
+       -Record
