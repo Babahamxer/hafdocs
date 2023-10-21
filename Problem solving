@@ -101,3 +101,201 @@ Module divisions are as followed:
 - Not null constraints: All attributes in the tables.
 
 Please note that this design is a starting point and can be further refined based
+
+
+
+
+
+
+
+To find out which students are enrolled in a particular course, we can follow these steps:
+
+1. Identify the course for which we want to find the enrolled students. Let's assume we have the CourseID for this course.
+
+2. Join the tables Course, Student, and Grade using the CourseID. This will give us a combined table that includes information about the students enrolled in the course.
+
+3. Extract the StudentIDs from the combined table. These are the IDs of the students enrolled in the course.
+
+4. To get more detailed information about the students, we can join the Student table with the Parent and User tables using the StudentID.
+
+5. Finally, we can retrieve the desired information, such as the student's first name, last name, and email, from the combined table.
+
+Here is an example SQL query that implements this logic:
+
+
+sql
+SELECT 
+    Student.StudentID,
+    Student.FirstName,
+    Student.LastName,
+    Parent.Email
+FROM 
+    Course
+JOIN 
+    Grade ON Course.CourseID = Grade.CourseID
+JOIN 
+    Student ON Grade.StudentID = Student.StudentID
+JOIN 
+    Parent ON Student.ParentID = Parent.ParentID
+JOIN 
+    User ON Student.UserID = User.UserID
+WHERE 
+    Course.CourseID = 'your_course_id';
+​
+
+
+Replace 'your_course_id' with the actual CourseID for which you want to find the enrolled students. This query will return a table with the StudentID, first name, last name, and email of the students enrolled in the specified course.
+
+
+To find out which students are enrolled in a particular course and what is their attendance status, you can follow these steps:
+
+1. Identify the course for which you want to find the enrolled students. Let's assume we have the CourseID for this course.
+
+2. Join the tables Course, Student, Grade, and Attendance using the CourseID. This will give us a combined table that includes information about the students enrolled in the course and their attendance status.
+
+3. Extract the StudentIDs from the combined table. These are the IDs of the students enrolled in the course.
+
+4. To get more detailed information about the students, we can join the Student table with the Parent and User tables using the StudentID.
+
+5. Finally, we can retrieve the desired information, such as the student's first name, last name, and email, from the combined table.
+
+Here is an example SQL query that implements this logic:
+
+
+sql
+SELECT 
+    Student.StudentID,
+    Student.FirstName,
+    Student.LastName,
+    Parent.Email,
+    Attendance.AttendanceStatus
+FROM 
+    Course
+JOIN 
+    Grade ON Course.CourseID = Grade.CourseID
+JOIN 
+    Student ON Grade.StudentID = Student.StudentID
+JOIN 
+    Parent ON Student.ParentID = Parent.ParentID
+JOIN 
+    User ON Student.UserID = User.UserID
+JOIN 
+    Attendance ON Student.StudentID = Attendance.StudentID
+WHERE 
+    Course.CourseID = 'your_course_id';
+​
+
+
+Replace 'your_course_id' with the actual CourseID for which you want to find the enrolled students. This query will return a table with the StudentID, first name, last name, email, and attendance status of the students enrolled in the specified course.
+
+Please note that the specific SQL syntax and table names may vary depending on your database schema. You may need to adjust the query accordingly to ensure it works correctly with your database.
+
+To find out which students are enrolled in a particular course and what is their contact information, you can follow these steps:
+
+1. Identify the course for which you want to find the enrolled students. Let's assume we have the CourseID for this course.
+
+2. Join the tables Course, Student, Grade, and Attendance using the CourseID. This will give us a combined table that includes information about the students enrolled in the course and their attendance status.
+
+3. Extract the StudentIDs from the combined table. These are the IDs of the students enrolled in the course.
+
+4. To get more detailed information about the students, we can join the Student table with the Parent and User tables using the StudentID.
+
+5. Finally, we can retrieve the desired information, such as the student's first name, last name, and email, from the combined table.
+
+Here is an example SQL query that implements this logic:
+
+
+sql
+SELECT 
+    Student.StudentID,
+    Student.FirstName,
+    Student.LastName,
+    Parent.Email,
+    Attendance.AttendanceStatus
+FROM 
+    Course
+JOIN 
+    Grade ON Course.CourseID = Grade.CourseID
+JOIN 
+    Student ON Grade.StudentID = Student.StudentID
+JOIN 
+    Parent ON Student.ParentID = Parent.ParentID
+JOIN 
+    User ON Student.UserID = User.UserID
+JOIN 
+    Attendance ON Student.StudentID = Attendance.StudentID
+WHERE 
+    Course.CourseID = 'your_course_id';
+​
+
+
+Replace 'your_course_id' with the actual CourseID for which you want to find the enrolled students. This query will return a table with the StudentID, first name, last name, email, and attendance status of the students enrolled in the specified course.
+
+Please note that the specific SQL syntax and table names may vary depending on your database schema. You may need to adjust the query accordingly to ensure it works correctly with your database.
+
+To find out which students are enrolled in a particular course and what is their contact information, you can follow these steps:
+
+1. Identify the course for which you want to find the enrolled students. Let's assume we have the Course.
+
+
+
+To get a list of all students enrolled in a particular course, you can use the following query:
+Oct 07 3:45 PM
+BLACKBOX AI Chat
+
+
+
+sql
+SELECT 
+    Student.StudentID,
+    Student.FirstName,
+    Student.LastName,
+    Parent.Email,
+    Attendance.AttendanceStatus
+FROM 
+    Course
+JOIN 
+    Grade ON Course.CourseID = Grade.CourseID
+JOIN 
+    Student ON Grade.StudentID = Student.StudentID
+JOIN 
+    Parent ON Student.ParentID = Parent.ParentID
+JOIN 
+    User ON Student.UserID = User.UserID
+JOIN 
+    Attendance ON Student.StudentID = Attendance.StudentID
+WHERE 
+    Course.CourseID = 'your_course_id';
+​
+
+
+Replace 'your_course_id' with the actual CourseID for which you want to find the enrolled students. This query will return a table with the StudentID, first name, last name, email, and attendance status of the students enrolled in the specified course.
+
+Please note that the specific SQL syntax and table names may vary depending on your database schema. You may need to adjust the query accordingly to ensure it works correctly with your database.
+
+To find out which students are enrolled in a particular course and what is their contact information, you can follow these steps:
+
+1. Identify the course for which you want to find the enrolled students. Let's assume we have the CourseID for this course.
+
+2. Join the tables Course, Student, Grade, and Attendance using the CourseID. This will give us a combined table that includes information about the students enrolled in the course and their attendance status.
+
+3. Extract the StudentIDs from the combined table. These are the IDs of the students enrolled in the course.
+
+4. To get more detailed information about the students, we can join the Student table with the Parent and User tables using the StudentID.
+
+5. Finally, we can retrieve the desired information, such as the student's first name, last name, and email, from the combined table.
+
+Here is an example SQL query that implements this logic:
+
+
+sql
+SELECT 
+    Student.StudentID,
+    Student.FirstName,
+    Student.LastName,
+    Parent.Email,
+    Attendance.AttendanceStatus
+FROM 
+    Course
+JOIN 
+   
