@@ -42,3 +42,62 @@ Module divisions are as followed:
        -Login & Logout
        -Complain
        -Record
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        *****DATEBASE*****
+
+    Designing a database for a school management system requires careful planning and consideration of the various entities and relationships involved. Here is a proposed design:
+
+1. Entities:
+
+- Student
+- Teacher
+- Course
+- Department
+- Grade
+- Attendance
+- Parent
+- User
+
+2. Relationships:
+
+- A Student is enrolled in a Course.
+- A Teacher teaches a Course.
+- A Course belongs to a Department.
+- A Student receives a Grade for a Course.
+- A Student has an Attendance record.
+- A Student is associated with a Parent.
+- A User can have multiple roles, such as Student, Teacher, Parent, or Administrator.
+
+3. Tables:
+
+- Student (StudentID, FirstName, LastName, DateOfBirth, Gender, Address, PhoneNumber, Email, ParentID, UserID)
+- Teacher (TeacherID, FirstName, LastName, DateOfBirth, Gender, Address, PhoneNumber, Email, DepartmentID, UserID)
+- Course (CourseID, CourseName, CourseDescription, DepartmentID, TeacherID)
+- Department (DepartmentID, DepartmentName)
+- Grade (GradeID, StudentID, CourseID, Grade, GradeDate)
+- Attendance (AttendanceID, StudentID, CourseID, AttendanceDate, AttendanceStatus)
+- Parent (ParentID, FirstName, LastName, DateOfBirth, Gender, Address, PhoneNumber, Email, UserID)
+- User (UserID, Username, Password, Role)
+
+4. Constraints:
+
+- Primary keys: StudentID, TeacherID, CourseID, DepartmentID, GradeID, AttendanceID, ParentID, UserID.
+- Foreign keys: StudentID in Grade and Attendance, TeacherID in Course, DepartmentID in Course, ParentID in Student, UserID in Student, Teacher, and Parent.
+- Unique constraints: Username in User.
+- Not null constraints: All attributes in the tables.
+
+Please note that this design is a starting point and can be further refined based
