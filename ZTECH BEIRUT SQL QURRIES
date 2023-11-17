@@ -1,0 +1,20 @@
+
+**************************************************************
+To find information about product added via purchase order
+table will be generated which comprises of order_id,supplier_name,
+created_datetime,product_code,received_qty. These attributes can be 
+used to determine which product added into the system, when, where and
+by whom?.
+*******************************************************************
+
+SELECT
+po.id,
+po.supplier_name,
+po.created_datetime,
+poi.product_code,
+poi.received_qty
+FROM
+purchase_order AS po, purchase_order_items AS poi
+WHERE 
+po.id=poi.po_id AND poi.product_code=24
+order by po.created_datetime desc;
