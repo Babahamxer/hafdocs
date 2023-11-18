@@ -18,3 +18,20 @@ purchase_order AS po, purchase_order_items AS poi
 WHERE 
 po.id=poi.po_id AND poi.product_code=24
 order by po.created_datetime desc;
+
+
+**********************************************************************
+Yadda zaa gano product din da aka siyar da kumma wanda aka siyarwa da 
+Quantity da aka siyar.
+*********************************************************************
+SELECT
+orders.id,
+orders.customer_name,
+orders.ordered_datetime,
+order_items.product_name,
+order_items.qty
+FROM
+orders, order_items
+WHERE 
+orders.id=order_items.order_id 
+order by orders.ordered_datetime desc;
