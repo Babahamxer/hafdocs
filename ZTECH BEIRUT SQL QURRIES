@@ -35,3 +35,9 @@ orders, order_items
 WHERE 
 orders.id=order_items.order_id 
 order by orders.ordered_datetime desc;
+
+************************************************************************
+To find out the latest price of a product 
+************************************************************************
+SELECT id,order_id,created_datetime,product_name,price,qty,created_user_id 
+FROM bk.order_items order by created_datetime desc;
