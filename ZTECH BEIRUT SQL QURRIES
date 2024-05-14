@@ -41,3 +41,28 @@ To find out the latest price of a product
 ************************************************************************
 SELECT id,order_id,created_datetime,product_name,price,qty,created_user_id 
 FROM bk.order_items order by created_datetime desc;
+
+
+
+
+
+
+
+
+
+
+**************************************************************************
+To find out the quantity of products available currently in the system for 
+both main-branch and Ztech_store while comparing with the physical items in
+the shop during investigvation and supervision this is called 
+(Stock-taken/Stocking/ZtechUpdate).
+***************************************************************************
+SELECT
+inventory.id,
+inventory.product_code,
+products.name,
+inventory.qty
+FROM
+bk.products, bk.inventory
+WHERE 
+products.code=inventory.product_code;
