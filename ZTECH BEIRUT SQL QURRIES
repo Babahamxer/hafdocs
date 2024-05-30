@@ -20,6 +20,12 @@ po.id=poi.po_id AND poi.product_code=24
 order by po.created_datetime desc;
 
 
+
+
+
+
+
+
 **********************************************************************
 Yadda zaa gano product din da aka siyar da kumma wanda aka siyarwa da 
 Quantity da aka siyar.
@@ -36,6 +42,13 @@ WHERE
 orders.id=order_items.order_id 
 order by orders.ordered_datetime desc;
 
+
+
+
+
+
+
+
 ************************************************************************
 To find out the latest price of a product 
 ************************************************************************
@@ -43,6 +56,15 @@ SELECT id,order_id,created_datetime,product_name,price,qty,created_user_id
 FROM bk.order_items order by created_datetime desc;
 
 
+
+
+
+*************************************************************************
+To make purchase order this is the query we run to find out the actual
+products which are out of stock.
+***********************************************************************
+SELECT inventory.id,products.name,inventory.qty from inventory inner join products on 
+inventory.product_code = products.code where qty <= 30 ;
 
 
 
